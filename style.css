@@ -1,0 +1,91 @@
+.road {
+    width: 100%;
+    height: 270px;
+    background: black;
+    position: relative;
+    margin: auto;
+    transform: rotateX(70deg);
+    top: -60px;
+}
+
+body {}
+
+.road::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 45%;
+    background: linear-gradient(to right, black 30%, white 0%);
+    background-size: 100px 10px;
+    animation: abcd 1s linear infinite;
+}
+
+@keyframes abcd {
+    100% {
+        background-position: -200px;
+    }
+}
+
+.wheel {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background: silver;
+    animation: abc 3s linear infinite;
+    position: relative;
+    top: -240px;
+    left: 133px;
+    border: 5px solid black;
+}
+
+.wheel2 {
+    top: -265px;
+    left: 175px;
+}
+
+.wheel::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    top: 26%;
+    left: 26%;
+    background: linear-gradient(to right, red 30%, silver 0%);
+    background-size: 75% 5%;
+}
+
+.wheel::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    bottom: 28%;
+    left: 26%;
+    background: linear-gradient(to right, red 30%, silver 0%);
+    background-size: 75% 5%;
+}
+
+@keyframes abc {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.top {
+    width: 80px;
+    height: 30px;
+    background: red;
+    position: relative;
+    top: -225px;
+    left: 127px;
+}
+
+.overtop {
+    width: 30px;
+    height: 12px;
+    background: blue;
+    position: relative;
+    top: -225px;
+    left: 150px;
+}
